@@ -2,6 +2,18 @@
 
 REST-Rant is an app where users can review restaurants.
 
+TBD - SUMMARY
+
+## Tech Usage
+
+**CSS Framework:** Bootstrap
+
+**Stack:** MongoDB, Express, NodeJS
+
+**Server-Side Rendering:** JSX
+
+**Node Modules**: method-override, dotenv, express-react-views
+
 | METHOD | PATH                     | PURPOSE                                 |
 | ------ | ------------------------ | --------------------------------------- |
 | GET    | /                        | Home Page                               |
@@ -15,3 +27,33 @@ REST-Rant is an app where users can review restaurants.
 | POST   | /places/:id/rant         | Create a rant about a place             |
 | DELETE | /places/:id/rant/:rantid | Delete a rant about a place             |
 | GET    | \*                       | 404 page                                |
+
+## Database
+
+**places**
+
+| Field    | Type      |
+| -------- | --------- |
+| \_id     | Object ID |
+| name     | String    |
+| city     | String    |
+| state    | String    |
+| cuisines | String    |
+| pic      | String    |
+
+**rants**
+
+| Field    | Type                  |
+| -------- | --------------------- |
+| \_id     | Object ID             |
+| place_id | ref(places) Object_Id |
+| rant     | Boolean               |
+| rating   | Number                |
+| comment  | String                |
+| reviewer | String                |
+
+## Planning
+
+### User Stories
+
+TBD
